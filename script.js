@@ -1,4 +1,4 @@
-// Selecionar o display e os botões
+//Selecionar o display e os botões
 const display = document.getElementById('display');
 const buttons = document.querySelectorAll('button');
 
