@@ -1,17 +1,19 @@
+/* Estilos Gerais */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f2f5;
+    background-color: #778899;
     font-family: 'Arial', sans-serif;
     margin: 0;
 }
 
+/* Calculadora */
 .calculator {
     width: 100%;
     max-width: 400px;
-    background-color: #fff;
+    background-color: #B0C4DE;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,17 +22,19 @@ body {
     align-items: center;
 }
 
+/* Display */
 #display {
     width: 100%;
     padding: 20px;
     font-size: 2rem;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #778899;
     border-radius: 5px;
     text-align: right;
     box-sizing: border-box;
 }
 
+/* Botões */
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -38,6 +42,7 @@ body {
     width: 100%;
 }
 
+/* Estilo dos Botões */
 button {
     padding: 20px;
     font-size: 1.5rem;
@@ -49,6 +54,12 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.operation{
+    font-size: 1.5rem;
+    font-weight:400;
+}
+
+/* Estilo dos Botões (hover e active) */
 button:hover {
     background-color: #e2e2e2;
 }
@@ -57,10 +68,12 @@ button:active {
     background-color: #d4d4d4;
 }
 
+/* Botões que ocupam duas colunas */
 .span-two {
     grid-column: span 2;
 }
 
+/* Botão de Igual (=) */
 .equals {
     background-color: #4CAF50;
     color: white;
@@ -72,4 +85,46 @@ button:active {
 
 .equals:active {
     background-color: #3e8e41;
+}
+
+/* Consultas de Mídia para Responsividade */
+
+/* Para telas menores que 600px de largura */
+@media (max-width: 600px) {
+    #display {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do display */
+        padding: 15px;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem; /* Reduz o tamanho da fonte dos botões */
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr); /* Ajusta a grid para 4 colunas */
+        gap: 8px;
+    }
+
+    .span-two {
+        grid-column: span 2; /* Mantém a largura do botão que ocupa 2 colunas */
+    }
+}
+
+/* Para telas menores que 400px de largura */
+@media (max-width: 400px) {
+    #display {
+        font-size: 1.2rem; /* Reduz ainda mais o tamanho da fonte do display */
+        padding: 10px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem; /* Reduz ainda mais o tamanho da fonte dos botões */
+    }
+
+    .buttons {
+        grid-template-columns: repeat(4, 1fr); /* Ajusta a grid para 4 colunas */
+        gap: 5px;
+    }
 }
